@@ -65,6 +65,13 @@ body {
   background-color: #F1F1F1;
 }
 
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .content-page {
   width: 1170px;
   margin: 0 auto;
@@ -169,19 +176,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-}
-
-.last-navbutton {
-  border: 1px solid #CC9933;
-  border-radius: 10px;
-  gap: 10px;
-  color: #CC9933;
-  background: #FFFFFF;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
-  padding: 30px;
 }
 
 .list-item {
@@ -518,7 +512,7 @@ body {
   max-width: 1170px;
   height: 256px;
   background-color: #E9E9E9;
-  padding: 45px 920px 170px 40px;
+  padding: 45px;
   border-radius: 15px;
   margin-bottom: 70px;
 }
@@ -534,10 +528,15 @@ body {
 
 .filling-form {
   width: 1080px;
-  height: 106px;
+  min-height: 106px;
   background-color: #FFFFFF;
   border-radius: 15px;
-  padding: 32px 45px 32px 15px;
+  padding: 30px 28px 28px 30px;
+  justify-content: space-between;
+}
+
+.form-style {
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -554,11 +553,10 @@ body {
   line-height: 16px;
 }
 
-.form-style {
-  padding: 11px 0px 0px 28px;
+.input-info {
+  width: 100%;
+  border: 0;
 }
-
-.input-info {}
 
 .city-style {
   width: 169px;
@@ -566,70 +564,138 @@ body {
 }
 
 .contacts-block {
+  width: 1170px;
   margin-bottom: 40px;
 }
 
-.contacts-stuff {
-  width: 1170px;
-  min-height: 618px;
-  background-color: #FFFFFF;
-}
 
-.contacts-list {
-  list-style-type: none;
+.list-contact {
+  list-style: none;
   width: 375px;
-  min-height: 528px;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 528px;
 }
 
-.email-list {
-  list-style-type: none;
-}
-
-.contacts-style {
-  margin-right: 83px;
-}
-
-.item-word {
+.section-name {
   font-family: "MullerBold";
 }
 
+.contacts-form {
+  width: 1170px;
+  min-height: 618px;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.button-road {}
+
+.wright-side-image {
+  background-repeat: no-repeat;
+  flex-basis: auto;
+  flex-grow: 0;
+  width: 100%;
+  border-radius: 10px;
+  padding: 45px;
+}
 
 .footer-block {
   width: 1170px;
   min-height: 371px;
   background-color: #333333;
   padding: 45px 45px 1px 45px;
-  box-sizing: content-box;
-}
-
-.footer-list {
-  color: #FFFFFF;
-  flex-direction: column;
+  border-radius: 15px;
 }
 
 .footer-list {
   justify-content: flex-start;
 }
 
-.laguna-info {
-
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 190%;
-  margin-bottom: 40px;
+.label-style {
+  flex-direction: column;
 }
 
-.image-sun {
-  margin-right: 100px;
+.label-style:nth-child(n+4) {
+  width: 10%;
+}
+
+.no-border {
+  border: 0;
+}
+
+.label-word {
+  margin-bottom: 10px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.description {
+  color: #999999;
+}
+
+.email {
+  color: #CC9933;
+}
+
+.footer-info p {
+  margin: 0;
+  color: white;
+  width: 302px;
+  margin-bottom: 37px;
+  height: 30%;
+  line-height: 190%;
+}
+
+.footer-info a {
+  color: white;
+  display: block;
+  color: #CC9933;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: white;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #CC9933;
+  display: block;
+  width: 300px;
+}
+
+.rout-button {
+  border: 1px solid #CC9933;
+  border-radius: 10px;
+  padding: 30px;
+  gap: 10px;
+  color: #CC9933;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.sun {
   position: absolute;
-  margin: 0px 0px 100px 740px;
+  left: 890px;
+  top: 5470px;
 }
 
 .social {
-  flex-wrap: wrap;
   align-content: flex-end;
-  flex-direction: column;
+  width: 25px;
+}
+
+.social-link-advisor {
+  background-image: url(../img/Group.svg);
+}
+
+.social-link-okru {
+  background-image: url(../img/ok.svg);
+}
+
+.social-link-vk {
+  background-image: url(../img/vk.svg);
 }
