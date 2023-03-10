@@ -16,7 +16,7 @@
         <header>
             <div class="container">
                 <div class="top-header flex">
-                    <a href="#" class="logo"><img src="./img/logo.svg"></a>
+                    <a href="#" class="logo"><img src="./img/logo.svg" alt="logofoto"></a>
                     <a href="tel:+7495322-54-48" class="phone-number flex">+7 495 322-54-48</a>
                     <a href="#" class="personal-account flex"><svg width="31" height="12" viewBox="0 0 21 12"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
                             <li class="list-item"><a href="#bnf">Преимущества</a></li>
                             <li class="list-item"><a href="#pst">Размещение</a></li>
                             <li class="list-item"><a href="#">Блог</a></li>
-                            <li class="list-item"><a href="#cnt">Контакты</a></li>
+                            <li class="list-item"><a href="#contacts-board">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="block-button flex">
@@ -41,7 +41,7 @@
                         <button class="second-navbutton">Обратный звонок</button>
                     </div>
                 </div>
-            </div>
+            </div>  
         </header>
 
         <main>
@@ -382,18 +382,18 @@
                             </div>
                             <div class="label-style flex">
                                 <label class="label-word" for="Date">Дата</label>
-                                <input class="input-info" id="Date" type="date" value="" min="2023-01-01"
+                                <input class="input-info" id="Date" type="date" name="date" value="" min="2023-01-01"
                                     max="2023-12-31">
                             </div>
-                            <div class="label-style flex">
+                            <div class="label-style-night flex">
                                 <label class="label-word" for="Night">Ночей</label>
-                                <input class="input-info" id="Night" type="number" min="1" max="30" value=""
-                                    placeholder="Число">
+                                <input class="input-info" id="Night" type="number" min="1" max="30" name="nights" value=""
+                                    placeholder="6">
                             </div>
-                            <div class="label-style flex">
+                            <div class="label-style-tourist flex">
                                 <label class="label-word" for="Tourists">Туристы</label>
-                                <input class="input-info" id="Tourists" type="number" min="1" max="10" value=""
-                                    placeholder="Число">
+                                <input class="input-info" id="Tourists" type="number" min="1" max="10" name="tourists" value=""
+                                    placeholder="2">
                             </div>
                             <button class="navbutton-wanna-tour">Найти</button>
                         </form>
@@ -403,71 +403,114 @@
 
 
             <section id="contacts-board">
+                <h2 class="wanna-tour-h2" style="margin-left: 40px;">Контакты</h2>
                 <div class="contacts-block flex">
+                    <div class="contacts-info flex">
 
-                    <div class="contacts-form">
-                        <h2 class="special_h2">Контакты</h2>
-                        <address>
-                            <ul class="list-contact">
-                                <li class="border-bottom"><span class="section-name">Адрес</span> <span
-                                        class="li-style">Москва, улица Юности, дом 5 строение
-                                        4, офис 2</li></span>
-                                <li class="li-style border-bottom"><span class="section-name">Телефон</span> <a
-                                        href="tel:+7 499 535-64-34">+7 499 535-64-34</a> <a
-                                        href="tel:+7 495 005-05-44">+7 495 005-05-44</a></li>
-                                <li class="  border-bottom flex"><span class="section-name">Email</span> <span
-                                        class="email"><a href="mailto:lg.oona@mail.ru"
-                                            target="_blank">lg.oona@mail.ru</a>
-                                        <p class="description">По вопросам бронирования</p>
-                                    </span>
-                                    </span> <span class="email"><a href="hotels.ln@mail.ru"
-                                            target="_blank">hotels.ln@mail.ru</a>
-                                        <p class="description">По вопросам сотрудничества</p>
-                                    </span>
-                                </li>
-                                <li class="border-bottom"><span class="section-name">График</span> <span>
-                                        <p>Понедельник-пятница, с 10:00 до 19:00</p>
-                                    </span>
-                                </li>
-                            </ul>
-                            <button class="rout-button">Построить маршрут</button>
-                        </address>
+                        <div class="flex">
+                            <span class="bold" style="font-size: 20px; margin-right: 60px;">Адрес</span>
+                            <span style="flex-basis: 100%; line-height: 150%;">Москва, улица Юности, дом 5 строение 4,
+                                офис 2</span>
+                        </div>
+
+                        <span class="border-bottom"></span>
+
+                        <div class="flex">
+                            <span class="bold" style="font-size: 20px; margin-right: 53px;">Телефоны</span>
+                            <span style="margin-top: 4px;"> <a href="tel:+7 499 535-64-34"
+                                    style="color: #CC9933; line-height: 150%;">+7 499 535-64-34</a> <a
+                                    href="tel:+7 495 005-05-44"
+                                    style="color: #CC9933; line-height: 150%;">+7 495 005-05-44</a></span>
+                        </div>
+                        <span class="border-bottom"></span>
+
+                        <div class="flex" style="justify-content: space-between;">
+                            <span class="bold" style="font-size: 20px; margin-right: 103px;">Email</span>
+                            <div class="flex contacts-email">
+                                <a href="mailto:lg.oona@mail.ru" style="color: #CC9933;">lg.oona@mail.ru</a> <span
+                                    style="color:#999999;
+                            ;">по вопросам бронирования</span>
+                                <a href="mailto:hotels.ln@mail.ru" style="color: #CC9933;">hotels.ln@mail.ru</a> <span
+                                    style="color: #999999;">по вопросам
+                                    сотрудничества</span>
+                            </div>
+                        </div>
+
+                        <span class="border-bottom"></span>
+                        <span class="flex">
+                            <span class="bold" style="font-size: 20px; margin-right: 63px;">График</span>
+
+                            <span style="flex-basis: 100%; line-height: 150%;">Понедельник-пятница,
+                                с 10:00 до 19:00</span>
+                        </span>
+
+                        <span class="border-bottom"></span>
+
+                        <button class="way-button">Построить маршрут</button>
                     </div>
 
-                    <div class="wright-side-image">
-                        <img src="./img/reception.png" alt="Контакты">
+                    <div class="reception-image">
+
                     </div>
+
 
                 </div>
-
             </section>
         </main>
 
         <footer>
             <div class="footer-block flex">
-                <div class="footer-info">
-                    <span class="company">
-                        <p>© 2012–2020 Управляющая компания Объединённой сети «Лагуна Хотелс»</p>
-                    </span>
-                    <span class="company">
-                        <p>Представленная на сайте информация носит справочный характер и не является публичной офертой
-                        </p>
-                    </span>
-                    <span class="company"><a href="#" class="police">Пользовательское соглашение</a></span>
+
+                <div class="flex"
+                    style="flex-direction: column; justify-content: space-between; width: 302px; margin-right: 125px;">
+                    <div>
+                        <span class="white-text" style="line-height: 190%;
+                        ">© 2012–2020 Управляющая компания Объединённой сети «Лагуна
+                            Хотелс»</span>
+                    </div>
+
+                    <div>
+                        <span class="white-text" style="line-height: 190%;">Представленная на сайте информация
+                            носит справочный характер
+                            и не является публичной
+                            офертой</span>
+                    </div>
+
+                    <div>
+                        <span class="yellow-link">Пользовательское соглашение</span>
+                    </div>
                 </div>
-                <div class="footer-contact">
-                    <p>11710, улица Юности, дом 5 строение 4, офис 2</p>
-                    <a href="tel:+7 499 535-64-34">+7 499 535-64-34</a>
-                    <a href="tel:+7 495 005-05-44">+7 495 005-05-44</a>
-                    <p><a href="mailto:lg.oona@mail.ru">lg.oona@mail.ru</a></p>
-                    <p><a href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a></p>
+
+                <div class="flex" style="width: 708px; justify-content: space-between;">
+                    <div class="flex" style="flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <span class="white-text" style="margin-bottom: 15px;">11710, улица Юности, дом 5 строение 4,
+                                офис 2</span>
+                        </div>
+
+                        <div class="flex" style="height: 48px; flex-direction: column; justify-content: space-between;">
+                            <span class="yellow-link"><a href="tel:+7 499 535-64-34">+7 499 535-64-34</a></span> <span
+                                class="yellow-link"><a href="tel:+7 495 005-05-44">+7 495 005-05-44</a></span>
+                        </div>
+
+                        <div class="flex" style="height: 48px; flex-direction: column; justify-content: space-between;">
+                            <span class="yellow-link"><a href="mailto:lg.oona@mail.ru">lg.oona@mail.ru</a></span> <span
+                                class="yellow-link"><a href="mailto:hotels.ln@mail.ru">hotels.ln@mail.ru</a></span>
+                        </div>
+                    </div>
+
+                    <div class="block-whith-image">
+                        <div class="sun-image">
+
+                        </div>
+                    </div>
+
+                    <div class="flex social">
+                        <a href="#" style="background-image: url(./img/Group.svg);"></a>
+                        <a href="#" style="background-image: url(./img/ok.svg);"></a>
+                        <a href="#" style="background-image: url(./img/vk.svg);"></a>
+                    </div>
                 </div>
-                <div class="sun">
-                    <img src="./img/sun.svg" alt="Солнце">
-                </div>
-                <a href="#" class="social-link-advisor"></a>
-                <a href="#" class="social-link-okru"></a>
-                <a href="#" class="social-link-vk"></a>
             </div>
         </footer>
     </div>
