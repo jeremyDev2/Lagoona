@@ -623,6 +623,7 @@ body {
   color: #CC9933;
   border: solid 1px #CC9933;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .reception-image {
