@@ -13,16 +13,8 @@ const YellowButton: React.FC<ButtonProps> = ({text, url, className}) => {
             <button className={className}>{text}</button>
         </a>
     ) : (
-        <button style={{color: "#CC9933"}} className={className}></button>
+        <button style={{color: "#CC9933"}} className={className}>{text}</button>
     );
 } 
-
-
-
-
-
-
-
-
 
 export default YellowButton;

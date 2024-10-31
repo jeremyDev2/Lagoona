@@ -1,4 +1,5 @@
 import React from "react";
+import YellowButton from "./YellowButton";
 
 interface HotelItemProps {
     imgSrc:     string;
@@ -38,7 +39,7 @@ const HotelCard: React.FC<HotelItemProps> = ({ imgSrc, price, rating, name, loca
                 </div>
                 <h3 className="hotel-name">{name}</h3>
                 <span className="country-info">{location}</span>
-                <button className="second-navbutton flex">Номера</button>
+                <YellowButton text="Rooms" className="second-navbutton flex"/>
             </div>
         </li>
     );

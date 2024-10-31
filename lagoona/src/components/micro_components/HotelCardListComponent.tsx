@@ -87,7 +87,7 @@ const PostingList: React.FC = () => {
                     ))}
                     <li className="posting-list-item flex">
                         <a className="all-hotel-variants flex" href="#">
-                            Посмотреть все варианты
+                            All variants
                             <svg
                                 className="all-hotel-variants-arrow"
                                 width="25"
