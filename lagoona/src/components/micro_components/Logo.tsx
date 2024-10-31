@@ -1,7 +1,7 @@
 ﻿import React from "react";
-import logo from "./assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
-const Logo:React.FC = () => {
+const Logo: React.FC = () => {
     return (
         <a href="#" className="logo">
             <img src={logo} alt="logofoto" />
