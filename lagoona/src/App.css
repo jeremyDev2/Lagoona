@@ -308,6 +308,13 @@ body {
   background-position: center;
   border-radius: 15px;
 }
+.maldivs-2{
+  background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(../src/assets/Maldives-2.jpg);
+  margin-bottom: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+}
 
 .crete {
   background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(./assets/crete.png);
@@ -317,8 +324,23 @@ body {
   margin-bottom: 0;
 }
 
+.crete-2{
+  background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(./assets/Crete-2.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  margin-bottom: 0;
+}
+
 .luxe {
   background-image: url(./assets/luxe.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  border-radius: 15px;
+}
+
+.luxe-2{
+  background-image: url(./assets/luxury_2.jpg);
   background-repeat: no-repeat;
   background-position: left;
   border-radius: 15px;
