@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-interface SpecialOfferProps {
-    title:                string;
-    price:                string;
-    link?:                string;
-    ArticleClassName?:    string;
-    TitleClassName?:      string;
+interface SpecialOfferComponentProps {
+  title:            string;
+  price:            string;
+  link:             string;
+  ArticleClassName: string;
+  TitleClassName:   string;
+  image:            string[];
 }
 
-const SpecialOfferComponent: React.FC<SpecialOfferProps> = ({ title, price, link, ArticleClassName, TitleClassName }) => {
-    return (
-        <article className={`${ArticleClassName} flex`}>
-            <h3 className={TitleClassName}>{title}</h3>
-            <span className="special-item-price">{price}</span>
-            <a href={link} className="special-item-links">
-                Подробнее
-                <svg className="svg-arrow" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.49998 1.00002L9.27815 8.7782L1.49998 16.5564" stroke="#F0BF5F" strokeWidth="2" />
-                </svg>
-            </a>
-        </article>
-    );
-}
+const SpecialOfferComponent: React.FC<SpecialOfferComponentProps> = ({ title, price, link, ArticleClassName, TitleClassName, image }) => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % image.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [image.length]);
+
+  return (
+    <motion.div
+      key        =  {currentImage}
+      className  =  {`${ArticleClassName} ${ArticleClassName}-${currentImage + 1}`}
+      initial    =  {{ opacity:  0 }}
+      animate    =  {{ opacity:  5 }}
+      transition =  {{ duration: 1 }}
+    >
+      <h3 className={TitleClassName}>{title}</h3>
+      <p className="special-item-price">{price}</p>
+      <a href={link} className="special-item-links">Learn more</a>
+    </motion.div>
+  );
+};
 
 export default SpecialOfferComponent;
