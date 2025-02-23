@@ -39,7 +39,7 @@ const HotelCard: React.FC<HotelItemProps> = ({ imgSrc, price, rating, name, loca
                 </div>
                 <h3 className="hotel-name">{name}</h3>
                 <span className="country-info">{location}</span>
-                <YellowButton text="Rooms" className="second-navbutton flex"/>
+                <YellowButton text="Rooms" className="second-navbutton flex" url="#"/>
             </div>
         </li>
     );

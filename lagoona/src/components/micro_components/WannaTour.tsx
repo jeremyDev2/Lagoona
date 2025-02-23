@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import YellowButton from "./YellowButton"; 
+
 
 interface ToureFormState {
     city:           string
@@ -57,7 +59,7 @@ const TourForm: React.FC = () => {
                             <label className="label-word" htmlFor="tourists">Tourist</label>
                             <input className="input-info" id="Tourists" type="number" name="tourists" value={FormData.tourists_count} min="1" max="10" onChange={handleChange} />
                         </div>
-                        <button className="navbutton-wanna-tour" type="submit">Search</button>
+                        <YellowButton className="navbutton-wanna-tour" type="submit" url="#" text="Search"/>
                     </form>
                 </div>
             </div>

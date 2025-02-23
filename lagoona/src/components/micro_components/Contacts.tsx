@@ -1,4 +1,5 @@
 import React from "react";
+import YellowButton from "./YellowButton"; 
 
 interface ContactDetailProps {
     label:      string;
@@ -55,7 +56,7 @@ const ContactsInformation: React.FC = () => (
         <ContactDetail label="Schedule" content={contactsData.schedule} />
         <div className="border-bottom"></div>
 
-        <button className="way-button">Route</button>
+        <YellowButton className="way-button" text="Route" url=""/>
     </div>
 );
 
